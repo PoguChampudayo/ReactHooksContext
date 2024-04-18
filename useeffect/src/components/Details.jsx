@@ -17,16 +17,28 @@ export const Details = () => {
        uploadUser(id)
       }, [id]);
   if (userDetails) {
-    return (
-        <div>
-            <img src={userDetails.avatar} alt="111" />
-            {userDetails.name}
-            {/* {userDetails.details.city}
-            {userDetails.details.company}
-            {userDetails.details.position} */}
-            
-        </div>
-      )
+    try {
+        return (
+            <div className='details'>
+                <img src={userDetails.avatar} alt="111" />
+                <ul>
+                {userDetails.name}
+                {userDetails.details.city}
+                {userDetails.details.company}
+                {userDetails.details.position}
+                </ul>
+            </div>
+        )
+    }
+    catch (e) {
+        return (
+            <div>
+                Choose a person
+            </div>
+        )
+    }
+        
+    }
   }
       
-}
+

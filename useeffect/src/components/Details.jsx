@@ -22,10 +22,10 @@ export const Details = () => {
             <div className='details'>
                 <img src={userDetails.avatar} alt="111" />
                 <ul>
-                {userDetails.name}
-                {userDetails.details.city}
-                {userDetails.details.company}
-                {userDetails.details.position}
+                <li>{userDetails.name}</li>
+                <li>{userDetails.details.city}</li>
+                <li>{userDetails.details.company}</li>
+                <li>{userDetails.details.position}</li>
                 </ul>
             </div>
         )
